@@ -70,3 +70,5 @@ rest1.owner = !rest1.owner && "Piccolo";
 
 console.log(rest1);
 console.log(rest2);
+
+// logical AND assignment operator assigns a value to a variable if it is currently truthy.
