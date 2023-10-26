@@ -71,4 +71,17 @@ rest1.owner = !rest1.owner && "Piccolo";
 console.log(rest1);
 console.log(rest2);
 
-// logical AND assignment operator assigns a value to a variable if it is currently truthy.
+//FOR OF LOOP
+
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+
+for (const item of menu) console.log(item);
+
+// to get indeces
+console.log("------FOR OF LOOP-----");
+
+// for (const [index, el] of menu.entries()) {
+//   console.log(`${index + 1}: ${el}`);
+// }
+
+for (const [i, el] of menu.entries()) console.log(`${i + 1}: ${el}`);
