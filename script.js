@@ -285,3 +285,44 @@ for (const [team, odd] of Object.entries(game.odds)) {
   const teamStr = team === "x" ? "draw" : "victory " + game[team];
   console.log(`Odd of ${teamStr}: ${odd}`);
 }
+
+/// CReATING SETS.
+
+const orderSet = new Set([
+  "Pasta",
+  "Pizza",
+  "Pizza",
+  "Risotto",
+  "Pasta",
+  "Pizza",
+]);
+
+console.log(orderSet);
+console.log(new Set("Jonas"));
+
+// to check the size of a set.
+
+console.log(orderSet.size);
+console.log(orderSet.has("Pizza"));
+console.log(orderSet.has("moo moo"));
+
+//update sets
+
+orderSet.add("Garlic Bread");
+orderSet.add("Mdahu");
+orderSet.delete("Risotto");
+// orderSet.clear();
+
+console.log(orderSet);
+
+for (const order of orderSet) console.log(order);
+
+//Example
+
+const staff = ["Waiter", "Chef", "Waiter", "Manager", "Chef", "Waiter"];
+
+const staffUnique = new Set(staff);
+
+console.log(staffUnique);
+
+// SET DOES NOT HAVE INDECES
