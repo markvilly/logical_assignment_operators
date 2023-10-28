@@ -364,3 +364,13 @@ console.log("-----CRUD/READ----HAS----");
 console.log(rest.has("categories"));
 // console.log(rest.delete(2));
 console.log(rest.size);
+
+console.log("---OBJECTS AS KEYS---");
+const arr = [1, 2];
+
+rest.set(arr, "test");
+rest.set(document.querySelector("h1"), "Heading");
+
+// USING OBJECT AS KEYS:
+// console.log(rest.get(arr));
+console.log(rest);
