@@ -321,8 +321,46 @@ for (const order of orderSet) console.log(order);
 
 const staff = ["Waiter", "Chef", "Waiter", "Manager", "Chef", "Waiter"];
 
-const staffUnique = new Set(staff);
+const staffUnique = [...new Set(staff)];
 
 console.log(staffUnique);
 
+console.log(
+  new Set(["Waiter", "Chef", "Waiter", "Manager", "Chef", "Waiter"]).size
+);
 // SET DOES NOT HAVE INDECES
+
+console.log(new Set("Jonasschmedtmann").size);
+
+// Sets are Cool
+
+//MAPS - are a lot more useful than sets.
+
+const rest = new Map();
+rest.set("name", "Classico Italiano");
+rest.set(1, "Firenze, Italy");
+rest.set(2, "Lisbon, Portugal");
+
+console.log(rest.set(3, "Kigali, Uganda"));
+
+console.log("------CRUD/ UPDATE------ GET----");
+
+rest
+  .set("categories", ["Italian", "Pizzeria", "Vegeterian", "Organic"])
+  .set("open", 11)
+  .set("close", 23)
+  .set(true, "we are open :D")
+  .set(false, "we are closed");
+
+console.log(rest.get("name"));
+console.log(rest.get(true));
+console.log(1);
+
+const time = 21;
+console.log(rest.get(time > rest.get("open") && time < rest.get("close")));
+
+console.log("-----CRUD/READ----HAS----");
+
+console.log(rest.has("categories"));
+// console.log(rest.delete(2));
+console.log(rest.size);
