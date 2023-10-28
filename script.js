@@ -373,4 +373,18 @@ rest.set(document.querySelector("h1"), "Heading");
 
 // USING OBJECT AS KEYS:
 // console.log(rest.get(arr));
+
+const sabi = {
+  name: "sabi",
+  age: 42,
+  sex: "fem",
+  gender: "rather not say",
+};
+
+const games = ["Ps4", "PSVITA", "XBOX", "GITHUB"];
+rest.set("games", games);
+rest.set(sabi, "Sabi Jr.");
+
 console.log(rest);
+
+// NEW MAP IMPLEMENTATION.
