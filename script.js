@@ -419,7 +419,7 @@ for (const [key, value] of question) {
   if (typeof key === "number") console.log(`answer ${key}: ${value}`);
 }
 
-const answer = Number(prompt("Your answer"));
+const answer = 3;
 console.log(answer);
 const logicAns = answer === question.get("correct");
 console.log(question.get(logicAns));
