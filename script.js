@@ -388,3 +388,42 @@ rest.set(sabi, "Sabi Jr.");
 console.log(rest);
 
 // NEW MAP IMPLEMENTATION.
+
+const question = new Map([
+  ["Question", "What is the best prorgamming langues in the world?"],
+  [1, "C"],
+  [2, "Java"],
+  [3, "JavaScript"],
+  ["correct", 3],
+  [true, "Correct!"],
+  [false, "Try again!"],
+]);
+
+// Converting Objects to Maps.
+
+const [[key, valu], val, third] = new Map(Object.entries(openingHours));
+console.log(key, valu);
+
+// Using For Loop to loop over maps
+
+//QUIZ APP.
+console.log(question);
+console.log(
+  question.get("question") ??
+    "there's something wrong somewhere, try looking at your KEY entry"
+);
+// use for loop to print options to the console.
+
+for (const [key, value] of question) {
+  // print elements with key as a number.
+  if (typeof key === "number") console.log(`answer ${key}: ${value}`);
+}
+
+const answer = Number(prompt("Your answer"));
+console.log(answer);
+const logicAns = answer === question.get("correct");
+console.log(question.get(logicAns));
+
+//Convert Maps to ARRAY
+
+console.log(...question);
