@@ -707,3 +707,16 @@ maskCredid(3322333);
 maskCredid("24243245454");
 
 console.log("jonasey".padStart(10, "X"));
+
+// REPEATING STRING METHOD.
+
+const message2 = "Bad weather... All departures Delayed";
+
+console.log(message.repeat(5));
+
+const planesInLine = function (n) {
+  console.log(`there are ${n} planes in line ${"✈️".repeat(n)}`);
+};
+
+planesInLine(6);
+planesInLine(3);
