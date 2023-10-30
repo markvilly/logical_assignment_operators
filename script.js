@@ -671,6 +671,15 @@ const newName = ["Mr.", firstName, lastName.toUpperCase()].join(" ");
 console.log(newName);
 
 // TO capitalize
+const capitalizeName = function (name) {
+  const names = name.split(" ");
+  const newNames = [];
+
+  for (const n of names) {
+    newNames.push(n[0].toUpperCase() + n.slice(1));
+  }
+  console.log(newNames.join(" "));
+};
 
 capitalizeName("Jessica ann smith davis");
 capitalizeName("jonas schmedtmann");
