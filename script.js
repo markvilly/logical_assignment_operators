@@ -485,10 +485,69 @@ for (const [time, event] of gameEvents) {
   console.log(logic);
 }
 
+// Exercise 1: Working with Sets
+
+// Create an empty Set called colorsSet.
+
+// Add the following colors to the colorsSet: "red", "blue", "green", "yellow", "red" (Note: Sets only allow unique values, so make sure "red" is not duplicated).
+
+// Check if "green" is in the colorsSet and log the result to the console.
+
+// Remove "blue" from the colorsSet.
+
+// Iterate through the colorsSet and print each color to the console.
+
+const colorSet = new Set();
+
+colorSet.add("red");
+colorSet.add("blue");
+colorSet.add("green");
+colorSet.add("yellow");
+colorSet.add("red");
+
+console.log(`Is green in color set? ${colorSet.has("purple")}`);
+colorSet.delete("blue");
+
+console.log(colorSet);
+for (const color of colorSet) console.log(color);
+
+/*
+Exercise 2: Working with Maps
+
+    Create an empty Map called personInfo.
+
+    Add the following key-value pairs to the personInfo map:
+        "name" -> "Alice"
+        "age" -> 30
+        "city" -> "New York"
+
+    Check if the map has the key "city" and log the result to the console.
+
+    Change the value for the "age" key to 31.
+
+    Iterate through the personInfo map and print each key and its corresponding value to the console.
+*/
+
+const personInfo = new Map();
+personInfo.set("name", "Alice");
+personInfo.set("age", 30);
+personInfo.set("city", "New York");
+console.log(personInfo.get("age"));
+
+console.log(personInfo);
 // WORKING WITH STRINGS.
 
 const airline = "TAP Air Portugal";
 
 const plane = "A320";
 
-console.log(plan[0]);
+console.log(plane[0]);
+console.log(plane[1]);
+console.log(plane[2]);
+
+console.log(airline.indexOf("A"));
+console.log(
+  airline.lastIndexOf("Air") === Number("-1")
+    ? "cannot be found, check your string"
+    : airline.lastIndexOf("Air")
+);
