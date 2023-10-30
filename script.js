@@ -657,7 +657,7 @@ checkBaggage("I have a laptop, some food and a pocket KnIfe");
 checkBaggage("Socks and camera");
 checkBaggage("Got some snacks and a gun for protection");
 
-// RETURNS AN ARRAY FROM THE DIVIDER.
+// SPLIT AND JOIN.
 console.log("a+very+nice+string".split("+"));
 
 console.log("Jonas Schmedtmann".split(" "));
@@ -669,3 +669,8 @@ console.log(firstName, lastName);
 const newName = ["Mr.", firstName, lastName.toUpperCase()].join(" ");
 
 console.log(newName);
+
+// TO capitalize
+
+capitalizeName("Jessica ann smith davis");
+capitalizeName("jonas schmedtmann");
