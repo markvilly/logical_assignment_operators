@@ -553,9 +553,33 @@ console.log(
 );
 
 let str = "Hello World!";
+
 console.log(str.indexOf("World"));
 console.log(str.slice(6));
 
 console.log(airline.indexOf("Air"));
 console.log(airline.slice(4));
 // this is a sub string - you can not mutate string for it is a primitive data type.
+
+console.log(airline.slice(0, airline.indexOf(" "))); // Extracting the first word.
+
+console.log(airline.slice(airline.lastIndexOf(" ") + 1));
+
+console.log(airline.slice(1, -1));
+console.log(str.includes("World"));
+const checkMiddleSeat = function (seat) {
+  // B and E are middle seat.
+  //   seat.includes("B") || seat.includes("E")
+  //     ? console.log("Middle Seat")
+  //     : console.log("Not Middle seat");
+  // USING SLICE;
+  seat.slice(-1) === "B" || seat.slice(-1) === "E"
+    ? console.log("Middle Seat.")
+    : console.log("Not Middle Seat.");
+};
+
+checkMiddleSeat("11B");
+checkMiddleSeat("23C");
+checkMiddleSeat("3E");
+
+console.log(new String("Jonas"));
