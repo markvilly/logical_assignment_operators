@@ -583,3 +583,76 @@ checkMiddleSeat("23C");
 checkMiddleSeat("3E");
 
 console.log(new String("Jonas"));
+
+//WORKING WITH STRINGS
+
+console.log(airline.toLowerCase()); // no arguments needed for these ones.
+console.log(airline.toUpperCase());
+console.log(airline);
+
+const passenger = "Jonas"; // jonas
+const passengerToLower = passenger.toLowerCase();
+
+const passengerCorrect =
+  passengerToLower[0].toUpperCase() + passengerToLower.slice(1);
+
+console.log(passengerCorrect);
+
+//function that take name of the passengers and returns it with the proper capitalization.
+
+const fixCap = function (firstname) {
+  const properName = firstname.toLowerCase();
+  console.log(properName[0].toUpperCase() + properName.slice(1));
+};
+
+fixCap("namor");
+fixCap("spider");
+fixCap("mecury");
+
+//check a user input email/ comparing emails.
+
+const email = "hello@jonas.io";
+const loginEmail = "  Hello@jonas.io \n";
+
+const normalizedEmail = loginEmail.toLowerCase().trim();
+
+console.log(email === normalizedEmail);
+
+const priceGB = "288,97E";
+const priceUS = priceGB.replace("E", "$").replace(",", ".");
+console.log(priceUS);
+
+const announcement = "Passengers come to boarding door 23. Boarding door 23!";
+
+// console.log(announcement.replaceAll("door", "gate"));
+
+// REGULAR EXPRESSION.
+
+console.log(announcement.replace(/door/g, "gate"));
+
+// return BOOLEANS.
+
+const planes = "Airbus A320neo";
+console.log(planes.includes("Air"));
+console.log(planes.includes("Boeing"));
+console.log(planes.replace(/Air/g, "cow"));
+
+// if (planes.startsWith("Airbus") && planes.endsWith("neo")) {
+//   console.log("Part of the NEW Airbus family");
+// }
+
+planes.startsWith("Airbus") &&
+  planes.endsWith("neo") &&
+  console.log("Part of the NEW Airbus Family.");
+
+// Practice Exercise.
+const checkBaggage = function (items) {
+  const baggage = items.toLowerCase();
+  baggage.includes("knife") || baggage.includes("gun")
+    ? console.log("You are NOT allowed on board.")
+    : console.log("Welcome aboard!");
+};
+
+checkBaggage("I have a laptop, some food and a pocket KnIfe");
+checkBaggage("Socks and camera");
+checkBaggage("Got some snacks and a gun for protection");
