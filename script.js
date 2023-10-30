@@ -551,3 +551,11 @@ console.log(
     ? "cannot be found, check your string"
     : airline.lastIndexOf("Air")
 );
+
+let str = "Hello World!";
+console.log(str.indexOf("World"));
+console.log(str.slice(6));
+
+console.log(airline.indexOf("Air"));
+console.log(airline.slice(4));
+// this is a sub string - you can not mutate string for it is a primitive data type.
