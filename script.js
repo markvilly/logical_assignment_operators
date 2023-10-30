@@ -656,3 +656,16 @@ const checkBaggage = function (items) {
 checkBaggage("I have a laptop, some food and a pocket KnIfe");
 checkBaggage("Socks and camera");
 checkBaggage("Got some snacks and a gun for protection");
+
+// RETURNS AN ARRAY FROM THE DIVIDER.
+console.log("a+very+nice+string".split("+"));
+
+console.log("Jonas Schmedtmann".split(" "));
+
+const [firstName, lastName] = "Jonas Schmedtmann".split(" ");
+
+console.log(firstName, lastName);
+
+const newName = ["Mr.", firstName, lastName.toUpperCase()].join(" ");
+
+console.log(newName);
